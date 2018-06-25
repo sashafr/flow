@@ -15,6 +15,8 @@
 				</div>
 			</section>
 
+			<?php echo theme_header_image(); ?>
+
       <!-- Wrapper -->
 			<div id="wrapper">
 

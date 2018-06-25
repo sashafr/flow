@@ -22,7 +22,7 @@
     <!-- Stylesheets -->
     <?php
     queue_css_url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css');
-    queue_css_file(array('style'));
+    queue_css_file(array('style', 'jqcloud'));
     echo head_css();
     ?>
 

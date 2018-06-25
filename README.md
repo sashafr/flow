@@ -1,49 +1,50 @@
-# Project Title
+# Flow
 
-One Paragraph of project description goes here
+Flow is a colorful and fully functional theme that add a word cloud to a collection of aggregate data of your choice.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Omeka Classic v2.6 https://omeka.org/classic/docs/Installation/Installation/
 
-```
-Give examples
-```
+
+### Suggested
+
+Simple Pages Plugin https://omeka.org/classic/docs/Plugins/SimplePages/
+Exhibit Builder https://omeka.org/classic/docs/Plugins/ExhibitBuilder/
+
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Follow Omega Classic’s tutorial of installing a theme.
+[https://omeka.org/classic/docs/Admin/Appearance/Themes/]
 
-Say what the step will be
 
-```
+`
 Give the example
-```
+`
 
 And repeat
 
-```
+`
 until finished
-```
+`
 
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Omeka Classic](https://omeka.org/classic/) - Used for database management framework.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Najay Greenidge**
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+*
 * Inspiration
 * etc
