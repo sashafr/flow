@@ -97,6 +97,7 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+
 	body {
 		background: #c1d7e8;
 	}
@@ -3249,6 +3250,10 @@ input, select, textarea {
 			background-color: #987352;
 		}
 
+		.wrapper.style4 {
+			background-color: #7ad9d3;
+		}
+
 		.wrapper.fullscreen {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3889,4 +3894,38 @@ input, select, textarea {
 				background-attachment: scroll;
 			}
 
+		}
+
+		#exhibit-bar ul {
+		    font-size:1em;
+		    line-height: 1.5;
+		    margin: 0;
+		}
+
+		#exhibit-bar li {
+		    display: inline;
+		    width: auto;
+		    margin:0;
+		    padding:0;
+		    font-family:Arvo, serif !important; /* Ensure unform font family across themes.*/
+		    font-size:1em; /* Ensure uniform font size across themes. */
+		}
+
+		#exhibit-bar a {
+		    text-decoration:none;
+		    padding: 0 1em 0 0;
+		    font-family:Arvo, serif !important; /* Ensure unform font family across themes.*/
+		    font-size:1em; /* Ensure uniform font size across themes. */
+		    display: inline-block;
+		    border: 0;
+		}
+
+		#exhibit-bar li a:link,
+		#exhibit-bar li a:visited {
+		    color: #ccc !important;
+		}
+
+		#exhibit-bar li a:hover,
+		#exhibit-bar li a:active {
+		    color: #fff !important;
 		}
