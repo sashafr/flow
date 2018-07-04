@@ -7,12 +7,38 @@ body {
   body {
     padding-top: 56px;
   }
+  .container {
+    max-width: 100%;
+  }
+}
 
-  .profile img {
+  #previous-item {
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    #next-item {
+      list-style: none;
+      margin: 0;
+      padding-left: 100px;
+      float: right; }
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+  .image {
+    float: right;
+    margin: 0 18px 18px 0; }
+
+  .headshot img {
     border: 1px solid #ccc;
     float: left;
     padding: 2px;
-    width: 100px;
+    width: auto;
     vertical-align: top;
-    height: auto; }
+    height: 450px; }
+
+  .item-file img {
+    max-width: 100%; }
+
 /* End Oral History Styles */

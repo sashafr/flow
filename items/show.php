@@ -3,6 +3,7 @@
 
 
 <?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bodyclass' => 'items show')); ?>
+
 <!-- Page Content -->
 <div class="container">
 
@@ -12,14 +13,14 @@
         <div class="col-lg-8">
 
             <!-- Title -->
-            <p class="profile">
+            <p class="headshot">
                 <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
             </p>
 
             <!-- Author -->
             <p class="lead">
                 by
-                <a href="page.html">Eastwick Oral History Project</a>
+                <a class="element-text"><?php echo link_to_collection_for_item(); ?></a>
             </p>
 
             <hr>
@@ -40,12 +41,11 @@
 
 
             <!-- Post Content -->
-
                 <!-- Insert Story clip -->
                 <?php if(metadata('item','Collection Name')): ?>
                     <div id="collection" class="element">
-                        <h3><?php echo __('Collection'); ?></h3>
-                        <div class="element-text"><?php echo link_to_collection_for_item(); ?></div>
+                        <h3><?php echo __('Their Story'); ?></h3>
+
                     </div>
                 <?php endif; ?>
 
@@ -77,6 +77,13 @@
                 </div>
                 <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
 
+
+
+                <div class="item-pagination navigation">
+                    <a id="previous-item" class="previous"><?php echo link_to_previous_item_show(); ?></a>
+                    <div id="next-item" class="next"><?php echo link_to_next_item_show(); ?></div>
+                </div>
+
                 <!-- Geolocation -->
                 <p class="lead"></p>
                 <hr>
@@ -103,8 +110,12 @@
                 <div class="card my-4">
                     <h5 class="card-header">Sponsored by:</h5>
                     <ul>
-                        <li>Eastwick Friends and Neighbors Coalition</li>
-                        <li>Penn Program in Environmental Humanities</li>
+                        <li>
+                          <a href="https://eastwickfriends.wordpress.com/">Eastwick Friends and Neighbors Coalition</a>
+                          </li>
+                        <li>
+                          <a href="http://www.ppehlab.org/">Penn Program in Environmental Humanities</a>
+                        </li>
 
 
 
@@ -112,13 +123,6 @@
 
                 </div>
 
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Citation:</h5>
-                    <p> Eastwick Oral History Project, “Eastwick Oral History Project: Margie Cobb and Nancy Cobb,” Schuylkill River & Urban Waters Research Corps Archive, accessed June 14, 2018, http://schuylkillcorps.org/items/show/1.
-                    </p>
-
-                </div>
                 <!-- Categories Widget -->
                 <div class="card my-4">
                     <h5 class="card-header">Categories</h5>
@@ -127,26 +131,26 @@
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">Web Design</a>
+                                      <a class="element-text"><?php echo link_to_collection_for_item(); ?></a>
                                     </li>
                                     <li>
-                                        <a href="#">HTML</a>
+                                        <a href="#">Take a Tour</a>
                                     </li>
                                     <li>
-                                        <a href="#">Freebies</a>
+                                        <a href="#">Collections</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">JavaScript</a>
+                                        <a href="#">Maps</a>
                                     </li>
                                     <li>
-                                        <a href="#">CSS</a>
+                                        <a href="#">Login</a>
                                     </li>
                                     <li>
-                                        <a href="#">Tutorials</a>
+                                        <a href="#">Register</a>
                                     </li>
                                 </ul>
                             </div>
@@ -160,5 +164,7 @@
             <!-- /.row -->
 
         </div>
+
         <!-- /.container -->
+
         <?php echo foot(); ?>
