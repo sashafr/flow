@@ -42,20 +42,33 @@
 
             <!-- Post Content -->
                 <!-- Insert Story clip -->
+                <?php if (metadata('item','has tags')): ?>
+                <div id="item-tags" class="element">
+                    <h3><?php echo __('Tags'); ?></h3>
+                    <div class="element-text"><?php echo tag_string('item'); ?></div>
+                </div>
+                <?php endif;?>
+
+
                 <?php if(metadata('item','Collection Name')): ?>
                     <div id="collection" class="element">
                         <h3><?php echo __('Their Story'); ?></h3>
-
                     </div>
                 <?php endif; ?>
 
 
-                <blockquote class="blockquote">
-                    <p class="mb-0">"And coming out to Elmwood- what was so amazing was that you had so much green space. And what I recall is my mom raising chickens and we had a grape vine and she would make wine. And the in the back of us there were empty lots so she had the soil turned over and she planted vegetables every year. So your neighbors – you would really just walk, we didn’t have sidewalks, you would walk in the streets, and we had one neighbor who had a horse, and other kinds of farm animals out there. So it was really a very tranquil nice area. But what I found out is that people that lived in the big city would consider us different. And I guess we were. But they always used derogative terms, like, “Oh, you live in the swamp,” and we were always at the end of the line. Eastwick is at the end of the line. But I had some great friends, I enjoyed our playtime. Neighbors were truly neighbors then – everybody knew everybody. So. It was great."</p>
-                    <footer class="blockquote-footer">Margie Cobb
-                        <cite title="Source Title"></cite>
-                    </footer>
-                </blockquote>
+                <div class="element-set">
+                            <div id="curatescape-story-item-type-metadata-lede" class="element">
+                                    <div class="element-text"><div style="text-align: center;"></div></div>
+                            </div><!-- end element -->
+                        <div id="curatescape-story-item-type-metadata-story" class="element">
+                                    <div class="element-text"><br>"And coming out to Elmwood- what was so amazing was that you had so much green space. And what I recall is my mom raising chickens and we had a grape vine and she would make wine. And the in the back of us there were empty lots so she had the soil turned over and she planted vegetables every year. So your neighbors – you would really just walk, we didn’t have sidewalks, you would walk in the streets, and we had one neighbor who had a horse, and other kinds of farm animals out there. So it was really a very tranquil nice area. But what I found out is that people that lived in the big city would consider us different. And I guess we were. But they always used derogative terms, like, “Oh, you live in the swamp,” and we were always at the end of the line. Eastwick is at the end of the line. But I had some great friends, I enjoyed our playtime. Neighbors were truly neighbors then – everybody knew everybody. So. It was great."
+                            </div><!-- end element -->
+
+
+                            </div><!-- end element -->
+                    </div>
+
                 <!-- View full transcript -->
 
                 <div>

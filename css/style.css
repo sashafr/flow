@@ -10,35 +10,21 @@ body {
   .container {
     max-width: 100%;
   }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+  .download-file{
+    image-width: 150px;
+  }
+  #next-item.next{
+    padding-right: 150px;
+  }
+  .item-images {
+    float: center;
+  }
 }
-
-  #previous-item {
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    #next-item {
-      list-style: none;
-      margin: 0;
-      padding-left: 100px;
-      float: right; }
-
-.container {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-  .image {
-    float: right;
-    margin: 0 18px 18px 0; }
-
-  .headshot img {
-    border: 1px solid #ccc;
-    float: left;
-    padding: 2px;
-    width: auto;
-    vertical-align: top;
-    height: 450px; }
-
-  .item-file img {
-    max-width: 100%; }
 
 /* End Oral History Styles */

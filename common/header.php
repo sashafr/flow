@@ -37,8 +37,12 @@
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-    <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
+
+
+    <?php
+     queue_css_file(array('header'));
+     ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="http://165.227.208.93/river/">Schuylkill River & Urban Waters Research Corps Archive</a>
