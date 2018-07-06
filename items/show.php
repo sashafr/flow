@@ -19,6 +19,8 @@ echo "This is the transcription: " . $transcipt; - removed (uselessness)
 <script type="text/javascript">
 var transcript = <?php echo json_encode($transcipt) ?>;
 var words = search(transcript);
+console.log(transcript);
+
 </script>
 
 <div id = "wordcount">
