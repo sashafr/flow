@@ -1,0 +1,89 @@
+.navbar-nav li>a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(255,255,255,.5);
+}
+
+.navbar-nav .active>a {
+    color: #fff;
+}
+
+#curatescape-map-canvas {
+    min-height: 20em;
+    height: 45vh;
+}
+
+.tour-route{
+	margin-right: 1em;
+}
+
+.tour-route-number{
+	font-size: 2rem;
+	border: .25rem solid #eaeaea;
+	border-radius: 50%;
+	text-align: center;
+	background: #fff;
+	height: 3.5rem;
+	width: 3.5rem;
+	line-height: 3rem;
+}
+
+.tour-route-path{
+    flex-grow: 1;
+    border-right: .25rem solid #eaeaea;
+    width: 0;
+    margin: -0.15em auto;
+}
+
+#tour-items .tour-item-container:last-child .tour-route-path{
+	border-right: 0 none transparent;
+}
+
+.flex{
+	display: flex;
+}
+
+.flex-end{
+	justify-content: flex-end;
+}
+
+.flex-grow{
+	flex-grow: 1;
+}
+
+.flex-wrap{
+	flex-wrap:wrap;
+}
+
+.flex-column{
+	flex-direction: column;
+}
+
+#tour-items article{
+	padding-bottom: 2.5rem;
+	padding-top: 0.2rem;
+}
+
+#tour-items article .item-description{
+	max-width: 40em;
+}
+
+#tour-items h3{
+	word-wrap: break-word;
+}
+
+#tour-items h3 a{
+	text-decoration: none;
+    color: #000;
+}
+
+.bg-flow {
+    background-color: #000066;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav li>a {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}
