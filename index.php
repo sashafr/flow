@@ -2,9 +2,6 @@
 
 
 <!-- Sidebar -->
-<<<<<<< HEAD
-
-
 
 <section id="sidebar">
 	<div class="inner">
@@ -25,21 +22,6 @@
 		</nav>
 	</div>
 </section>
-=======
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">Browse all exhibits</a></li>
-							<li><a href="#three">Map</a></li>
-							<li><a href="#four">Get in Touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
->>>>>>> 0823d96989199371ac797ce650952b28693c6487
 
       <!-- Wrapper -->
 			<div id="wrapper">
