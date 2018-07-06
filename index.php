@@ -2,6 +2,7 @@
 
 
 <!-- Sidebar -->
+<<<<<<< HEAD
 
 
 
@@ -24,6 +25,21 @@
 		</nav>
 	</div>
 </section>
+=======
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Who we are</a></li>
+							<li><a href="#two">Browse all exhibits</a></li>
+							<li><a href="#three">Map</a></li>
+							<li><a href="#four">Get in Touch</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+>>>>>>> 0823d96989199371ac797ce650952b28693c6487
 
       <!-- Wrapper -->
 			<div id="wrapper">
@@ -132,7 +148,6 @@
 
                 <!-- featured exhibit from db -->
 								<section>
-									<h2>Featured Exhibit:</h2>
                   <?php if ((get_theme_option('Display Featured Exhibit') !== '0')
                           && plugin_is_active('ExhibitBuilder')
                           && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
@@ -141,14 +156,21 @@
                   <?php endif; ?>
                   </section>
 							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
 						</div>
 					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
+					<!-- three. -->
+						<section id="three" class="wrapper style4 fullscreen fade-up">
+							<div class="inner">
+								<h1>Map</h1>
+								<ul class="actions">
+									<li><a href="#one" class="button scrolly">See Full Map</a></li>
+								</ul>
+							</div>
+						</section>
+
+				<!-- four. -->
+					<section id="four" class="wrapper style1 fade-up">
 						<div class="inner">
 							<h2>Get in touch</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>

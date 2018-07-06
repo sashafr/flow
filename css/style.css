@@ -87,8 +87,14 @@
 		height: 0;
 	}
 
+<<<<<<< HEAD
 	.row.uniform > * > :first-child {
 		margin-top: 0;
+=======
+
+	body {
+		background: #c1d7e8;
+>>>>>>> 0823d96989199371ac797ce650952b28693c6487
 	}
 
 	.row.uniform > * > :last-child {
@@ -3291,6 +3297,10 @@ h2, h3, h4, h5, h6 {
 			background-color: #953d75;
 		}
 
+		.wrapper.style4 {
+			background-color: #7ad9d3;
+		}
+
 		.wrapper.fullscreen {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3934,6 +3944,7 @@ h2, h3, h4, h5, h6 {
 
 		}
 
+<<<<<<< HEAD
 
 
 
@@ -3981,3 +3992,38 @@ body {
 }
 
 /* End Oral History Styles */
+=======
+		#exhibit-bar ul {
+		    font-size:1em;
+		    line-height: 1.5;
+		    margin: 0;
+		}
+
+		#exhibit-bar li {
+		    display: inline;
+		    width: auto;
+		    margin:0;
+		    padding:0;
+		    font-family:Arvo, serif !important; /* Ensure unform font family across themes.*/
+		    font-size:1em; /* Ensure uniform font size across themes. */
+		}
+
+		#exhibit-bar a {
+		    text-decoration:none;
+		    padding: 0 1em 0 0;
+		    font-family:Arvo, serif !important; /* Ensure unform font family across themes.*/
+		    font-size:1em; /* Ensure uniform font size across themes. */
+		    display: inline-block;
+		    border: 0;
+		}
+
+		#exhibit-bar li a:link,
+		#exhibit-bar li a:visited {
+		    color: #ccc !important;
+		}
+
+		#exhibit-bar li a:hover,
+		#exhibit-bar li a:active {
+		    color: #fff !important;
+		}
+>>>>>>> 0823d96989199371ac797ce650952b28693c6487
