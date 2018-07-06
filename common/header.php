@@ -62,6 +62,11 @@
         echo head_css();
         ?>
 
+        <script>
+        	// Async CSS
+        	loadCSS('<?php echo src('font-awesome/css/font-awesome.min.css','fonts');?>'); // font awesome css
+        </script>
+
         <!-- JavaScripts -->
         <?php
         queue_js_url('https://code.jquery.com/jquery-3.3.1.slim.min.js');

@@ -1,3 +1,11 @@
+footer {
+    margin-top: 30px;
+}
+
+.row-flow {
+    margin-top: 20px;
+}
+
 .navbar-nav li>a {
     display: block;
     padding: 0.5rem 1rem;
@@ -81,9 +89,193 @@
     background-color: #000066;
 }
 
+/*! SOCIAL MEDIA */
+.link-icons a span{
+	font-size:11px;
+	vertical-align:middle;
+	font-weight: 600;
+}
+
+.link-icons.no-label a span{
+	display:none;
+}
+
+.link-icons a:hover{
+	border-color:#fff;
+}
+
+.link-icons a.facebook:hover{
+	background-color:#305891;
+	color:#fff;
+}
+
+.link-icons a.twitter:hover{
+	background-color:#2ca8d2;
+	color:#fff;
+}
+
+.link-icons a.youtube:hover{
+	background-color:#de2826;
+	color:#fff;
+}
+
+.link-icons a.instagram:hover{
+	background-color:#000;
+	color:#fff;
+}
+
+.link-icons a.pinterest:hover{
+	background-color:#c82828;
+	color:#fff;
+}
+
+.link-icons a.reddit:hover{
+	background-color:#ff4501;
+	color:#fff;
+}
+
+.link-icons a.tumblr:hover{
+	background-color:#36465d;
+	color:#fff;
+}
+
+.link-icons a.wordpress:hover{
+	background-color:#0087be;
+	color:#fff;
+}
+
+.link-icons a.email:hover{
+	background-color:#0078d7;
+	color:#fff;
+}
+
+.link-icons a.apple:hover{
+	background-color:#000;
+	color:#fff;
+}
+
+.link-icons a.android:hover{
+	background-color:#77c159;
+	color:#fff;
+}
+
+.link-icons.colored a{
+	border-color:#fff;
+}
+
+.link-icons.colored a.facebook{
+	background-color:#305891;
+	color:#fff;
+}
+
+.link-icons.colored a.twitter{
+	background-color:#2ca8d2;
+	color:#fff;
+}
+
+.link-icons.colored a.youtube{
+	background-color:#de2826;
+	color:#fff;
+}
+
+.link-icons.colored a.instagram{
+	background-color:#000;
+	color:#fff;
+}
+
+.link-icons.colored a.pinterest{
+	background-color:#c82828;
+	color:#fff;
+}
+
+.link-icons.colored a.reddit{
+	background-color:#ff4501;
+	color:#fff;
+}
+
+.link-icons.colored a.tumblr{
+	background-color:#36465d;
+	color:#fff;
+}
+
+.link-icons.colored a.wordpress{
+	background-color:#0087be;
+	color:#fff;
+}
+
+.link-icons.colored a.email{
+	background-color:#0078d7;
+	color:#fff;
+}
+
+.link-icons.colored a.apple{
+	background-color:#000;
+	color:#fff;
+}
+
+.link-icons.colored a.android{
+	background-color:#77c159;
+	color:#fff;
+}
+
+.image-container-flow {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#search-form {
+    overflow: hidden;
+}
+
+.hero{
+	min-height:30em;
+	min-height: 70vh;
+	width: 100%;
+}
+
+.hero.short{
+	min-height: 15em;
+	min-height: 30vh;
+}
+
+.item-hero{
+	position: relative;
+	background: #000;
+	margin-bottom: 2em;
+	background-size: cover;
+	background-position: center center;
+}
+
+.item-hero .item-hero-text{
+	bottom: 0;
+	position: absolute;
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	background: #000;
+	background:linear-gradient(rgba(0,0,0,.2) 0%,rgba(0,0,0,.6) 30%, rgba(0,0,0,.8) 70%, rgba(0,0,0,1) 100%);
+	display: block;
+	width: 100%;
+	margin-bottom: 0;
+	padding: 18px;
+	box-sizing: border-box;
+}
+
+.item-hero .item-hero-text .subtitle{
+	color: #ddd;
+}
+
+.item-hero .item-hero-text .byline{
+	margin-bottom: 0;
+}
+
 @media (min-width: 992px) {
     .navbar-nav li>a {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
+    }
+
+    .image-container-flow {
+        height: 300px;
     }
 }

@@ -13,7 +13,7 @@ echo head( array( 'maptype'=>$maptype,'title' => ''.$label.' | '.$tourTitle, 'co
 <!-- Page Content -->
 <div class="container">
 
-    <div class="row">
+    <div class="row row-flow">
 
         <!-- Post Content Column -->
         <div class="col-lg-8">
@@ -97,7 +97,7 @@ echo head( array( 'maptype'=>$maptype,'title' => ''.$label.' | '.$tourTitle, 'co
         </div>
 
         <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
+        <div class="col-lg-4">
 
             <!-- Search Widget -->
             <div class="card my-4">
@@ -133,3 +133,5 @@ echo head( array( 'maptype'=>$maptype,'title' => ''.$label.' | '.$tourTitle, 'co
 
 </div>
 <!-- /.container -->
+
+<?php echo foot(); ?>
