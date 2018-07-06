@@ -1,19 +1,29 @@
 <?php echo head(array('bodyid'=>'home')); ?>
 
+
 <!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who we are</a></li>
-							<li><a href="#two">Take a Tour</a></li>
-							<li><a href="#three">Browse Oral Histories</a></li>
-              <li><a href="#four">Map</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+
+
+
+<section id="sidebar">
+	<div class="inner">
+		<nav>
+				<img src="https://static1.squarespace.com/static/547955f9e4b010fe66b4a701/t/5a730bf6e4966b2c0162042f/1517489143404/SRUWRC_Logo_Color_Small.png"
+				style="width:265px;height:auto;"
+				align="left">
+
+		<ul>
+				<li><a href="#intro">Welcome</a></li>
+				<li><a href="#one">About</a></li>
+				<li><a href="#four">Take a Tour</a></li>
+				<li><a href="#two">Browse Collections</a></li>
+				<li><a href="#five">Map</a></li>
+				<li><a href="#three">Contribute</a></li>
+
+			</ul>
+		</nav>
+	</div>
+</section>
 
       <!-- Wrapper -->
 			<div id="wrapper">
@@ -21,7 +31,10 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1>Schuylkill Corps Archive</h1>
+								<h1>Schuylkill Corps Archive</h1>
+								<img src="http://schuylkillcorps.org/files/theme_uploads/eb2634829141cbc4a29216e0d3a883c1.jpg"
+								style="width:auto;height:400px;"
+								align="left">
 							<p color: #000066;>The Schuylkill Corps Archive is an interactive and growing public archive of citizen science and public humanities projects. Together we will discover and document the tidal river's past and present while collaboratively imagining it's future. Inside, you will find historical and present day scientific data, photographs and oral accounts, for a more inclusive and interdisciplinary narrative of the river and surrounding river wards. Explore citizen science data sets and related research. Browse through the collections to learn about Lower Schuylkill River ecology, the communities that live along its banks and the industrial history that has shaped it. Take a virtual tour or search locations of interest freely using our map. We encourage and appreciate your contributions.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>

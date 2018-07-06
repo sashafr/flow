@@ -44,7 +44,7 @@
      queue_css_file(array('header'));
      ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
+
         <a class="navbar-brand" href="http://165.227.208.93/river/">Schuylkill River & Urban Waters Research Corps Archive</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -76,5 +76,5 @@
             </li>
           </ul>
         </div>
-      </div>
+
     </nav>
