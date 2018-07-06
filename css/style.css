@@ -1712,7 +1712,7 @@ h2, h3, h4, h5, h6 {
 		color: rgb(0, 0, 102);
 		font-weight: bold;
 		line-height: 1.5;
-		margin: 0 0 1.5em 0;
+		margin: 0 0 0em 0;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -2669,7 +2669,7 @@ h2, h3, h4, h5, h6 {
 	ul {
 		list-style: disc;
 		margin: 0 0 2em 0;
-		padding-left: 1em;
+		padding-left: 2em;
 	}
 
 		ul li {
@@ -3045,6 +3045,9 @@ h2, h3, h4, h5, h6 {
 			.spotlights > section > .image img {
 				border-radius: 0;
 				display: block;
+        width: 550px;
+        height: 1100px;
+        object-fit: contain(550px x 1100px);
 			}
 
 			.spotlights > section > .image:before {
@@ -3293,7 +3296,7 @@ h2, h3, h4, h5, h6 {
 		}
 
 		.wrapper.style4 {
-			background-color: #7ad9d3;
+			background-color: #8eb5ba;
 		}
 
 		.wrapper.fullscreen {
@@ -3950,7 +3953,7 @@ body {
   }
   .container {
     max-width: 100%;
-    background-color: #DBDBD3;
+    background-color: #fff;
 }
 .menu container {
   max-width: 100%;
@@ -3972,6 +3975,9 @@ body {
   .item-images {
     float: center;
   }
+}
+.btn {
+text: #000065;
 }
 
 /* End Oral History Styles */

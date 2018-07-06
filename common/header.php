@@ -45,34 +45,38 @@
      ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 
-        <a class="navbar-brand" href="http://165.227.208.93/river/">Schuylkill River & Urban Waters Research Corps Archive</a>
+        <a class="navbar-brand" href="#intro">Schuylkill River & Urban Waters Research Corps Archive</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="http://165.227.208.93/river/">Home
+              <a class="nav-link" href="#intro">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Take a Tour</a>
+              <a class="nav-link" href="#two">Take a Tour</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="http://204.48.26.187/oralhistories/home">Browse Collections</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Map</a>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Contribute</a>
+                <a class="nav-link" href="#three">Oral Histories</a>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="#four">Browse Exhibits</a>
+              </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+              <a class="nav-link" href="#five">Map</a>
+              </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#six">Contribute</a>
+                </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login/Register</a>
             </li>
           </ul>
         </div>

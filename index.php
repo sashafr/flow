@@ -13,10 +13,11 @@
 		<ul>
 				<li><a href="#intro">Welcome</a></li>
 				<li><a href="#one">About</a></li>
-				<li><a href="#four">Take a Tour</a></li>
-				<li><a href="#two">Browse Collections</a></li>
+				<li><a href="#two">Take a Tour</a></li>
+				<li><a href="#three">Oral Histories</a></li>
+				<li><a href="#four">Browse Exhibits</a></li>
 				<li><a href="#five">Map</a></li>
-				<li><a href="#three">Contribute</a></li>
+				<li><a href="#six">Contribute</a></li>
 
 			</ul>
 		</nav>
@@ -43,7 +44,7 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<a href="#" class="image"><img src="http://schuylkillcorps.org/files/original/4f22645b02e2022c9b947dd3b9334597.jpg" alt="" data-position="center center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Welcome to the Schuylkill Corps</h2>
@@ -54,8 +55,10 @@
 								</div>
 							</div>
 						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+
+						<!-- Two -->
+						<section id="two" class="wrapper style2 spotlights">
+							<a href="#" class="image"><img src="http://schuylkillcorps.org/files/original/8982de7e02bddcabc0c6a534ac1c0974.jpeg" alt="" data-position="top center" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Take a Tour</h2>
@@ -66,8 +69,9 @@
 								</div>
 							</div>
 						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+						<!-- Three -->
+						<section id="three" class="wrapper style2 spotlights">
+							<a href="#" class="image"><img src="http://schuylkillcorps.org/files/original/86d596d92ff572b34e7d92d93c74602a.jpg" alt="" data-position="25% 25%" /></a>
 							<div class="content">
 								<div class="inner">
 									<h2>Oral Histories</h2>
@@ -80,8 +84,8 @@
 						</section>
 					</section>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
+				<!-- Four -->
+					<section id="four" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>Browse Exhibits</h2>
   							<div class="features">
@@ -141,8 +145,8 @@
 						</div>
 					</section>
 
-					<!-- three. -->
-						<section id="three" class="wrapper style4 fullscreen fade-up">
+					<!-- Five -->
+						<section id="five" class="wrapper style4 fullscreen fade-up">
 							<div class="inner">
 								<h1>Map</h1>
 								<ul class="actions">
@@ -151,10 +155,10 @@
 							</div>
 						</section>
 
-				<!-- four. -->
-					<section id="four" class="wrapper style1 fade-up">
+				<!-- Six -->
+					<section id="six" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
+							<h2>Contribute Your Story</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
