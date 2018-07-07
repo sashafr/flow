@@ -65,6 +65,10 @@
         <script>
         	// Async CSS
         	loadCSS('<?php echo src('font-awesome/css/font-awesome.min.css','fonts');?>'); // font awesome css
+            loadCSS('<?php echo src('photoswipe/dist/photoswipe.all.min.css','javascripts');?>'); // photoswipe css
+            <?php if( 0 === strpos(current_url(), '/items/show') ):?>
+        		loadJS('<?php echo src('items-show.js','javascripts');?>'); // items-show.js
+        	<?php endif;?>	                      
         </script>
 
         <!-- JavaScripts -->

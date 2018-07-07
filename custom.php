@@ -229,9 +229,9 @@ function mh_global_header($html=null){
 		<span class="flex flex-end flex-grow flex-nav-container <?php echo get_theme_option('stacked_nav')==1 ? 'stacked' : null;?> ">
 			<?php if(!get_theme_option('hide_primary_nav')):?>
 			<span class="flex priority">
-	  			<a href="<?php echo url('/items/browse/');?>" class="button button-primary"><?php echo mh_item_label('plural');?></a>
+	  			<a href="<?php echo url(WEB_ROOT.'/items/browse/');?>" class="button button-primary"><?php echo mh_item_label('plural');?></a>
 	  			<?php if(plugin_is_active('TourBuilder')): ?>
-	  				<a href="<?php echo url('/tours/browse/');?>" class="button button-primary"><?php echo mh_tour_label('plural');?></a>
+	  				<a href="<?php echo url(WEB_ROOT.'/tours/browse/');?>" class="button button-primary"><?php echo mh_tour_label('plural');?></a>
 	  			<?php endif;?>
 			</span>
 			<?php endif;?>
@@ -1123,7 +1123,7 @@ function mh_the_byline($itemObj='item',$include_sponsor=false){
 
 			foreach ($authors as $author){
 				if($authlink==1){
-					$href='/items/browse?search=&advanced[0][element_id]=39&advanced[0][type]=is+exactly&advanced[0][terms]='.$author;
+					$href=WEB_ROOT.'/items/browse?search=&advanced[0][element_id]=39&advanced[0][type]=is+exactly&advanced[0][terms]='.$author;
 					$author='<a href="'.$href.'">'.$author.'</a>';
 				}
 
@@ -1439,18 +1439,17 @@ function mh_document_files($item='item',$html=null){
 			$size=formatSizeUnits($file->size);
 			$download=$file->getWebPath('original');
 
-			$html .= '<tr>';
-			$html .= '<td class="title"><a href="/files/show/'.$file->id.'">'.$title.'</a></td>';
-			$html .= '<td class="info"><span>'.$extension.'</span> / '.$size.'</td>';
-			$html .= '<td class="download"><a class="button" target="_blank" title="Download" href="'.$download.'"><i class="fa fa-download" aria-hidden="true"></i> <span>Download</span></a></td>';
-			$html .= '</tr>';
+			$html .= '<div class="row">';
+			$html .= '<div class="col-sm-6"><a href="'.$download.'">'.$title.'</a></div>';
+			$html .= '<div class="col-sm-6"><a class="button" target="_blank" title="Download" href="'.$download.'"><i class="fa fa-download" aria-hidden="true"></i> <span>Download</span></a></div>';
+			$html .= '</div>';
 		}
 
 	}
 	if($html){
 		echo '<h3>'.__('Documents').'</h3>';
 		echo '<figure id="item-documents">';
-		echo '<table><tbody><tr><th>Name</th><th>Info</th><th>Actions</th></tr>'.$html.'</tbody></table>';
+		echo $html;
 		echo '</figure>';
 	}
 
