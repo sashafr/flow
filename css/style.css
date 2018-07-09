@@ -2897,10 +2897,14 @@ h2, h3, h4, h5, h6 {
 	}
 
 	header p {
-		color: rgba(255, 255, 255, 0.35);
+		color: #000065;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
+  
+  .bg-dark {
+      background-color: #000065!important;
+  }
 
 	header h2 + p {
 		font-size: 1.25em;
@@ -3969,7 +3973,7 @@ body {
   .download-file{
     image-width: 150px;
   }
-  #next-item.next{
+  #next-item .next{
     padding-right: 150px;
   }
   .item-images {
