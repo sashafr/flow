@@ -1,9 +1,7 @@
 <?php
-$collectionTitle = metadata('collection', 'display_title');
-$totalItems = metadata('collection', 'total_items');
+$pageTitle = __('Browse Items');
+echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
-
-<?php echo head(array('title' => $collectionTitle, 'bodyclass' => 'collections show')); ?>
 
 <!-- Page Content -->
 <div class="container">
@@ -12,7 +10,7 @@ $totalItems = metadata('collection', 'total_items');
 
         <div class="col-lg-8">
 
-            <h1 class="my-4"><?php echo $collectionTitle; ?></h1>
+            <h1 class="my-4"><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 
             <!-- Items -->
 
@@ -50,9 +48,9 @@ $totalItems = metadata('collection', 'total_items');
 
             <!-- Side Widget -->
             <div class="card my-4">
-                <h5 class="card-header">Description</h5>
+                <h5 class="card-header">Side Widget</h5>
                 <div class="card-body">
-                    <?php echo metadata($collection, array('Dublin Core', 'Description')) ?>
+                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
                 </div>
             </div>
 

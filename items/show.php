@@ -1,183 +1,167 @@
+<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')),'bodyclass' => 'items show'));
+if ($hasimg=metadata($item, 'has thumbnail') ) {
+    $img_markup=item_image('fullsize',array(),0, $item);
+    preg_match('/<img(.*)src(.*)=(.*)"(.*)"/U', $img_markup, $result);
+    $hero_img = array_pop($result);
+}
+$maptype='story';
 
-<!-- NEED TO 1.MAKE IMAGE LARGER 2. ADD TEXT FROM DATATABLE 3.LINK THE PDF -->
-
-
-<?php echo head(array('title' => metadata('item', array('Dublin Core', 'Title')), 'bodyclass' => 'items show')); ?>
+$location = get_db()->getTable('Location')->findLocationByItem($item, true);
+if ($location) {
+    $usemap = true;
+} else {
+    $usemap = false;
+}
+?>
 
 <!-- Page Content -->
 <div class="container">
 
-    <div class="row">
+    <div class="row row-flow-double">
 
         <!-- Post Content Column -->
         <div class="col-lg-8">
 
-            <!-- Title -->
-            <a class="headshot">
-                <h1><?php echo metadata('item', array('Dublin Core','Title')); ?></h1>
-            </a>
+            <header id="story-header">
+                <?php
+                echo '<div class="item-hero '.(!$hasimg ? 'hero short' : 'hero').'" '.($hasimg ? 'style="background-image: url('.$hero_img.')"' : null).'>';
+                echo '<div class="item-hero-text">'.mh_the_title().mh_the_subtitle().mh_the_byline($item,true).'</div>';
+                echo '</div>';
+                echo function_exists('tour_nav') ? '<nav class="tour-nav-container top">'.tour_nav(null,mh_tour_label()).'</nav>' : null;
+                echo mh_the_lede();
+                ?>
+            </header>
 
-            <!-- Author -->
-            <a class="lead">
-                by
-                <a class="element-text"><?php echo link_to_collection_for_item(); ?></a>
-            </a>
-
-
-            <!-- Preview Image -->
-            <div id="item-images">
-                <?php if (count($item->getFiles()) > 0): ?>
-                    <?php set_loop_records('allfiles', $item->getFiles());
-                          $nopdfs = array() ?>
-                    <?php foreach (loop('allfiles') as $singlefile):?>
-                        <?php if ($singlefile->mime_type != 'application/pdf'): ?>
-                            <?php array_push($nopdfs, $singlefile); ?>
-                        <?php endif; ?>
-                    <?php endforeach;?>
-                    <?php echo file_markup($nopdfs); ?>
-                <?php endif; ?>
-
-            </div>
-
-
-            <!-- Post Content -->
-                <!-- Insert Story clip -->
-                <?php if (metadata('item','has tags')): ?>
-                <div id="item-tags" class="element">
-                    <h3><?php echo __('Tags'); ?></h3>
-                    <div class="element-text"><?php echo tag_string('item'); ?></div>
+            <!-- Tour Stops -->
+            <?php if (metadata('item', array('Item Type Metadata', 'Story')) != ""): ?>
+                <div class="lead">
+                    <?php echo mh_the_text(); ?>
                 </div>
-                <?php endif;?>
+                <hr>
+            <?php endif ?>
 
-
-                <?php if(metadata('item','Collection Name')): ?>
-                    <div id="collection" class="element">
-                        <h3><?php echo __('Their Story'); ?></h3>
-                    </div>
-                <?php endif; ?>
-
-
-                <div class="element-set">
-                            <div id="curatescape-story-item-type-metadata-lede" class="element">
-                                    <div class="element-text"><div style="text-align: center;"></div></div>
-                            </div><!-- end element -->
-                        <div id="curatescape-story-item-type-metadata-story" class="element">
-                                    <div class="element-text"><br>"And coming out to Elmwood- what was so amazing was that you had so much green space. And what I recall is my mom raising chickens and we had a grape vine and she would make wine. And the in the back of us there were empty lots so she had the soil turned over and she planted vegetables every year. So your neighbors – you would really just walk, we didn’t have sidewalks, you would walk in the streets, and we had one neighbor who had a horse, and other kinds of farm animals out there. So it was really a very tranquil nice area. But what I found out is that people that lived in the big city would consider us different. And I guess we were. But they always used derogative terms, like, “Oh, you live in the swamp,” and we were always at the end of the line. Eastwick is at the end of the line. But I had some great friends, I enjoyed our playtime. Neighbors were truly neighbors then – everybody knew everybody. So. It was great."
-                            </div><!-- end element -->
-
-
-                            </div><!-- end element -->
-                    </div>
-
-                <!-- View full transcript -->
-
-                <div>
-                    <?php if (count($item->getFiles()) > 0): ?>
-                        <?php set_loop_records('allfiles', $item->getFiles()); ?>
-                        <?php foreach (loop('allfiles') as $singlefile):?>
-                            <?php if ($singlefile->mime_type == 'application/pdf'): ?>
-                                <a class="btn btn-default" href="<?php echo file_display_url($singlefile, 'original') ?>" role="button">Read More (See Full Transcript)</a>
-                            <?php endif; ?>
-                        <?php endforeach;?>
-                    <?php endif; ?>
-                </div>
-
-
-                <!-- Insert Citation -->
-                <div id="item-citation" class="element">
-                    <h3><?php echo __('Citation'); ?></h3>
-                    <div class="element-text"><?php echo metadata('item','citation',array('no_escape'=>true)); ?></div>
-                </div>
-                <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-
-
-
-                <div class="item-pagination navigation">
-                    <a id="previous-item" class="previous"><?php echo link_to_previous_item_show(); ?></a>
-                    <div id="next-item" class="next"><?php echo link_to_next_item_show(); ?></div>
-                </div>
-
-                <!-- Geolocation -->
-                <p class="lead"></p>
-
-            </div>
-
-            <!-- Sidebar Widgets Column -->
-            <div class="col-md-4">
-
-                <!-- Search Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Search</h5>
-                    <div class="card-body">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                                <button class="btn btn-secondary" type="button">Go!</button>
-                            </span>
+            <!-- Oral Histories -->
+            <?php if (metadata('item', array('Item Type Metadata', 'Transcription')) != ""): ?>
+                <div class="accordion" id="accordionTranscript">
+                    <div class="card">
+                        <div class="card-header" id="transcriptHeading">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTranscript" aria-expanded="true" aria-controls="collapseTranscript">
+                                    Read Transcript
+                                </button>
+                            </h5>
                         </div>
-                    </div>
-                </div>
-
-
-                <!-- Side Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Sponsored by:</h5>
-                    <ul>
-                        <li>
-                          <a href="https://eastwickfriends.wordpress.com/">Eastwick Friends and Neighbors Coalition</a>
-                          </li>
-                        <li>
-                          <a href="http://www.ppehlab.org/">Penn Program in Environmental Humanities</a>
-                        </li>
-
-
-
-                    </ul>
-
-                </div>
-
-                <!-- Categories Widget -->
-                <div class="card my-4">
-                    <h5 class="card-header">Categories</h5>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                      <a class="element-text"><?php echo link_to_collection_for_item(); ?></a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Take a Tour</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Collections</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li>
-                                        <a href="#">Maps</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Login</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Register</a>
-                                    </li>
-                                </ul>
+                        <div id="collapseTranscript" class="collapse" aria-labelledby="transcriptHeading" data-parent="#accordionTranscript">
+                            <div class="card-body lead">
+                                <p><?php echo metadata('item', array('Item Type Metadata', 'Transcription')); ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
+            <?php endif ?>
 
-
-
-            </div>
-            <!-- /.row -->
+            <!-- Files -->
+            <section class="media">
+                <?php mh_video_files($item);?>
+                <?php mh_item_images($item);?>
+                <?php mh_audio_files($item);?>
+                <?php mh_document_files($item);?>
+            </section>
 
         </div>
 
-        <!-- /.container -->
+        <!-- Sidebar Widgets Column -->
+        <div class="col-lg-4">
 
-        <?php echo foot(); ?>
+            <!-- Search Widget -->
+            <div class="card">
+                <h5 class="card-header">Search</h5>
+                <div class="card-body">
+                    <?php echo search_form(); ?>
+                </div>
+            </div>
+
+            <!-- Map Widget -->
+            <?php if ($usemap): ?>
+                <div class="card my-4">
+                    <h5 class="card-header">Map</h5>
+                    <div class="card-body">
+                        <figure>
+                            <?php echo mh_map_type($maptype,$item); ?>
+                            <?php echo mh_map_actions($item);?>
+                        </figure>
+                        <figcaption><?php echo mh_map_caption();?></figcaption>
+                    </div>
+                </div>
+            <?php endif ?>
+
+            <!-- Word Cloud Widget -->
+            <?php if (metadata('item', array('Item Type Metadata', 'Transcription')) != ""): ?>
+
+                <!-- Tallies the frequency of every word in "Transcript" -->
+                <script type="text/javascript">
+                    var transcript = <?php echo json_encode(metadata('item', array('Item Type Metadata', 'Transcription'))) ?>;
+                    var words = search(transcript);
+                </script>
+
+                <div class="card my-4">
+                    <h5 class="card-header">Word Cloud</h5>
+                    <div class="card-body">
+                        <div id = "wordcount">
+                            <!-- Value generated by wordFreq.js -->
+                            <!-- check to see if item is an oral history/has a transcript then
+                            creates wordcloud; prints at approximately 17wps -->
+                            <script>
+                                if (words === undefined) {
+                                    console.log("This document is not an oral history.");
+                                } else {
+                                    // innerHTML --> draws 'word cloud' box
+                                    document.write('<div id="wc-container" style="width: 300px; height: 200px; border: 0px solid #ccc;"></div>');
+
+                                    // sorts the array by key values
+                                    words.sort(function(a, b) {
+                                        return b.weight - a.weight;
+                                    });
+
+                                    // prints specific range of values
+                                    $("#wc-container").jQCloud(words.sort().slice(1, 202));
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            <?php endif ?>
+
+            <!-- Metadata Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Metadata</h5>
+                <div class="card-body">
+                    <table>
+                        <?php foreach (all_element_texts($item, array('return_type' => 'array')) as $elementset => $elements): ?>
+                            <?php foreach ($elements as $element => $elementtext): ?>
+                                <?php if ($elementtext != "" && $element != "Title" && $element != "Transcription" && $element != "Story"): ?>
+                                    <div class="row" >
+                                        <div class="col-sm-12">
+                                            <div class="row element-title"><h5><?php echo $element ?></h5></div>
+                                            <ul class="list-group list-group-flush">
+                                                <?php foreach ($elementtext as $text): ?>
+                                                    <li class="list-group-item"><?php echo $text ?></li>
+                                                <?php endforeach ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<?php echo foot(); ?>
