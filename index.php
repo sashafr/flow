@@ -5,7 +5,7 @@
 
 				<!-- Intro -->
 
-				<section id="intro" class="wrapper style1 fullscreen fade-up" style="background-image: url(files/theme_uploads/schuylkillotter.jpg);">
+				<section id="intro" class="wrapper style1 fullscreen fade-up" style="background-image: url(files/theme_uploads/79bd9c95c51100ca3fc11c30345c7ed9.jpg);">
         <div class="inner flow-banner">
             <h1>Schuylkill River Archive</h1>
             <p color: #000066;>The Schuylkill Corps Archive is an interactive and growing public archive of citizen science and public humanities projects. Together we will discover and document the tidal river's past and present while collaboratively imagining it's future. Inside, you will find historical and present day scientific data, photographs and oral accounts, for a more inclusive and interdisciplinary narrative of the river and surrounding river wards. Explore citizen science data sets and related research. Browse through the collections to learn about Lower Schuylkill River ecology, the communities that live along its banks and the industrial history that has shaped it. Take a virtual tour or search locations of interest freely using our map. We encourage and appreciate your contributions.</p>
