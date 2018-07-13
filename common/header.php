@@ -72,7 +72,7 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file(array('jqcloud'));
+    queue_css_file(array('jqcloud', 'geolocation-items-map'));
     echo head_css();
     ?>
 
@@ -81,7 +81,7 @@
     queue_js_url('https://code.jquery.com/jquery-3.3.1.slim.min.js');
     queue_js_url('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js');
     queue_js_url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js');
-    queue_js_file(array('wordFreq', 'jqcloud'));
+    queue_js_file(array('wordFreq', 'jqcloud', 'contribution-public-form'));
     echo head_js();
     ?>
 </head>
@@ -103,19 +103,4 @@
         </div>
     </nav>
 <?php else: ?>
-    <!-- Sidebar -->
-    <section id="sidebar">
-        <div class="inner">
-            <nav>
-                <ul>
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#tours">Take a Tour</a></li>
-                    <li><a href="#collections">Browse Collections</a></li>
-                    <li><a href="#map">Map</a></li>
-                    <li><a href="#contribute">Contribute</a></li>
-                </ul>
-            </nav>
-        </div>
-    </section>
 <?php endif ?>

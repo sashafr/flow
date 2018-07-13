@@ -5,15 +5,11 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 <!-- Page Content -->
 <div class="container">
-
     <div class="row row-flow">
-
         <div class="col-lg-8">
-
             <h1 class="my-4"><?php echo $pageTitle; ?> <?php echo __('(%s total)', $total_results); ?></h1>
 
             <!-- Items -->
-
             <?php foreach (loop('collections') as $collection): ?>
                 <div class="card mb-4">
                     <?php if ($itemImage = record_image($collection, 'original', array('class' => 'card-img-top'))): ?>

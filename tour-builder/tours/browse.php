@@ -11,7 +11,6 @@ echo head( array(
 
 <!-- Page Content -->
 <div class="container">
-
     <div class="row row-flow">
 
         <!-- Blog Entries Column -->
