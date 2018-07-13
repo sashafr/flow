@@ -89,6 +89,8 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
+<?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
+
 <!-- Navigation -->
 <?php if (!is_current_url(url('/'))): ?>
     <nav class="navbar navbar-expand-lg navbar-dark bg-flow fixed-top">
