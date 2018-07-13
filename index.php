@@ -121,7 +121,7 @@
 							<div class="inner">
 								<h1>Map</h1>
 
-								
+
 								<ul class="actions">
 									<li><a href="#one" class="button scrolly">See Full Map</a></li>
 								</ul>
@@ -169,8 +169,6 @@
 
 <?php echo head(array('bodyid'=>'home', 'context' => 'home')); ?>
 
-<!-- Wrapper -->
-<div id="wrapper">
 
         <!-- Footer -->
         <footer id="footer" class="wrapper style1-alt">
