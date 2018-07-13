@@ -5,7 +5,7 @@
 }
 
 .flow-banner {
-    background-color: rgba(255, 255, 255, 0.4588235294117647);
+    background-color: #ffffffa8;
 }
 
 .flow-banner h1, .flow-banner p, .flow-banner a {
@@ -3811,6 +3811,10 @@ input, select, textarea {
 				width: 100%;
 			}
 
+      .logoimg{
+        display: none;
+      }
+
 				#sidebar > .inner {
 					-moz-flex-direction: row;
 					-webkit-flex-direction: row;
@@ -3865,8 +3869,8 @@ input, select, textarea {
 			#sidebar {
 				display: none;
 			}
+}
 
-		}
 
 /* Intro */
 
@@ -3876,6 +3880,7 @@ input, select, textarea {
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: cover;
+    background-image-op;
 	}
 
 		#intro p {

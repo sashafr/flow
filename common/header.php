@@ -114,7 +114,7 @@
     			<ul>
     				<li>
 
-              <img src="files/theme_uploads/ba077a34ce40105667f6c4f162769c37.png"
+              <img class= "logoimg" src="files/theme_uploads/ba077a34ce40105667f6c4f162769c37.png"
     				style="width:280px;height:auto;"
     				align="left">
           </li>
