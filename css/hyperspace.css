@@ -195,7 +195,7 @@ input, select, textarea {
 		color: #1f2f4f;
 		font-weight: bold;
 		line-height: 1.5;
-		margin: -1.2em 0 0.8em 0;
+		margin: 1.2em 0 0.8em 0;
     text-align: center;
     font-family: 'Oleo Script', cursive;
 	}
@@ -2850,7 +2850,7 @@ input, select, textarea {
 			border-left: solid 1px rgba(255, 255, 255, 0.15);
 			display: inline-block;
 			line-height: 1;
-			margin-left: 1.5em;
+			margin-left: 7em;
 			padding: 0 0 0 1.5em;
 		}
 

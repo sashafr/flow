@@ -46,7 +46,7 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Oral Histories</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+									<p>Browse here to listen to oral accounts of river ward communities as they share their relationships and interactions with the Schuylkill River and surrounding environment.</p>
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
 									</ul>
