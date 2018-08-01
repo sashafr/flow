@@ -124,7 +124,7 @@ if ($location) {
                                     });
 
                                     // prints specific range of values
-                                    $("#wc-container").jQCloud(words.sort().slice(1, 202));
+                                    jQuery("#wc-container").jQCloud(words.sort().slice(1, 102));
                                 }
                             </script>
                         </div>

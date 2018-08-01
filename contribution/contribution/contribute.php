@@ -6,6 +6,7 @@
  * @package Contribution
  */
 
+ queue_js_file('contribution-public-form');
 $contributionPath = get_option('contribution_page_path');
 if(!$contributionPath) {
     $contributionPath = 'contribution';
