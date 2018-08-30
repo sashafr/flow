@@ -25,11 +25,6 @@ function mh_search_form_default_record_types()
 	if(get_theme_option('default_file_search')) $recordTypes[]='File';
     return $recordTypes;
 }
-/*
-** Set Fallback Thumbnails
-*/
-add_file_fallback_image('audio','audio.png');
-add_file_fallback_image('video','video.png');
 
 /*
 ** SEO Page Description

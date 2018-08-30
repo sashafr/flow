@@ -512,3 +512,27 @@ section.media {
         height: 500px;
     }
 }
+
+/* Sidebar Cards */
+.card-body a {
+    color: #000066;
+}
+
+.card-body a:hover {
+    color: #000038;
+    text-decoration: none;
+}
+
+.card-body .btn-primary {
+    background-color: #fff;
+    border-color: #000066;
+}
+
+.card-body .btn-primary:hover {
+    background-color: #fff;
+    border-color: #000066;
+}
+
+.flow-sidebar h3 {
+    font-size: 1.25rem;
+}

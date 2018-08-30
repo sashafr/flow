@@ -78,10 +78,9 @@
 
     <!-- JavaScripts -->
     <?php
-    queue_js_url('https://code.jquery.com/jquery-3.3.1.slim.min.js');
     queue_js_url('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js');
     queue_js_url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js');
-    queue_js_file(array('wordFreq', 'jqcloud', 'contribution-public-form'));
+    queue_js_file(array('wordFreq', 'jqcloud'));
     echo head_js();
     ?>
 </head>

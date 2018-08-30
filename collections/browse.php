@@ -44,9 +44,9 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
             <!-- Side Widget -->
             <div class="card my-4">
-                <h5 class="card-header">Side Widget</h5>
-                <div class="card-body">
-                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+                <h5 class="card-header">Featured Item</h5>
+                <div class="card-body flow-sidebar">
+                    <?php echo random_featured_items(1); ?>
                 </div>
             </div>
 
