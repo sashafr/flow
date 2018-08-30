@@ -5,75 +5,58 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 
 <!-- Page Content -->
 <div class="container">
-  <div class="row row-flow">
-    <div class="col-lg-8">
-      <h1 class="my-4"><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
+    <div class="row row-flow">
+        <div class="col-lg-8">
+            <h1 class="my-4"><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
 
-      <!-- Exhibits -->
-      <?php if (count($exhibits) > 0): ?>
-        <nav class="navigation secondary-nav">
-          <?php echo nav(array(
-            array(
-              'label' => __('Browse All'),
-              'uri' => url('exhibits')
-            ),
-            array(
-              'label' => __('Browse by Tag'),
-              'uri' => url('exhibits/tags')
-            )
-          )); ?>
-        </nav>
-        <?php echo pagination_links(); ?>
+            <!-- Exhibits -->
+            <?php if (count($exhibits) > 0): ?>
 
-        <div class="records">
-          <?php $exhibitCount = 0; ?>
-          <?php foreach (loop('exhibit') as $exhibit): ?>
-            <?php $exhibitCount++; ?>
+                <div class="records">
+                    <?php foreach (loop('exhibit') as $exhibit): ?>
+                        <div class="card mb-4">
+                            <?php if ($exhibitImage = record_image($exhibit, 'original', array('class' => 'card-img-top'))): ?>
+                                <div class="image-container-flow">
+                                    <?php echo $exhibitImage; ?>
+                                </div>
+                            <?php endif; ?>
+                            <div class="card-body">
+                                <h2 class="card-title"><?php echo metadata('exhibit', 'title') ?></h2>
+                                <?php $desc = strip_tags(htmlspecialchars_decode(metadata('exhibit', 'description'))); ?>
+                                <p class="card-text"><?php echo snippet($desc,0,250) ?></p>
+                                <?php echo link_to_exhibit("Read More &rarr;",array('class'=>'btn btn-primary')); ?>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <?php echo pagination_links(); ?>
 
-            <div class="exhibit hentry <?php if ($exhibitCount%2==1) echo ' even'; else echo ' odd'; ?>">
-              <?php if ($exhibitImage = record_image($exhibit, 'thumbnail')): ?>
-                <?php echo exhibit_builder_link_to_exhibit($exhibit, $exhibitImage, array('class' => 'image')); ?>
-              <?php endif; ?>
-              <h2><?php echo link_to_exhibit(); ?></h2>
-
-            <?php if ($exhibitDescription = metadata('exhibit', 'description', array('no_escape' => true))): ?>
-            <div class="description"><?php echo $exhibitDescription; ?></div>
-            <?php endif; ?>
-
-            <?php if ($exhibitTags = tag_string('exhibit', 'exhibits')): ?>
-            <p class="tags"><?php echo $exhibitTags; ?></p>
+            <?php else: ?>
+                <p><?php echo __('There are no exhibits available yet.'); ?></p>
             <?php endif; ?>
         </div>
-      <?php endforeach; ?>
-    </div>
-    <?php echo pagination_links(); ?>
 
-  <?php else: ?>
-    <p><?php echo __('There are no exhibits available yet.'); ?></p>
-  <?php endif; ?>
-</div>
+        <!-- Sidebar Widgets Column -->
+        <div class="col-lg-4">
 
-<!-- Sidebar Widgets Column -->
-<div class="col-lg-4">
+            <!-- Search Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Search</h5>
+                <div class="card-body">
+                    <?php echo search_form(); ?>
+                </div>
+            </div>
 
-    <!-- Search Widget -->
-    <div class="card my-4">
-        <h5 class="card-header">Search</h5>
-        <div class="card-body">
-            <?php echo search_form(); ?>
+            <!-- Side Widget -->
+            <div class="card my-4">
+                <h5 class="card-header">Featured Item</h5>
+                <div class="card-body flow-sidebar">
+                    <?php echo random_featured_items(1); ?>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <!-- Side Widget -->
-    <div class="card my-4">
-        <h5 class="card-header">Side Widget</h5>
-        <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-        </div>
-    </div>
-
-</div>
-</div>
 </div>
 
 <?php echo foot(); ?>

@@ -1,5 +1,5 @@
         <!-- Footer -->
-        <footer class="py-2 bg-flow">
+        <footer class="footer py-2 bg-flow">
             <div class="container">
                 <div class="m-0 text-center text-white">
                     <?php echo mh_footer_find_us(); ?>

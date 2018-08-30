@@ -1,5 +1,13 @@
 footer {
     margin-top: 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+body > .container {
+    margin-bottom: 60px;
 }
 
 .row-flow {
@@ -514,11 +522,11 @@ section.media {
 }
 
 /* Sidebar Cards */
-.card-body a {
+.card a {
     color: #000066;
 }
 
-.card-body a:hover {
+.card a:hover {
     color: #000038;
     text-decoration: none;
 }
@@ -535,4 +543,62 @@ section.media {
 
 .flow-sidebar h3 {
     font-size: 1.25rem;
+}
+
+/* EXHIBIT BUILDER */
+.flow-exhibit-title {
+    margin-bottom: 1.25rem;
+}
+
+.flow-exhibit-pages > ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.flow-exhibit-pages > ul > li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 17px;
+    margin-bottom: 18px;
+}
+
+.flow-exhibit-pages ul li > ul {
+    padding-left: 1.5em;
+    margin-left: 0;
+}
+
+.flow-exhibit-pages ul li > ul li {
+    text-indent: -1.5em;
+    margin-left: 0;
+}
+
+.flow-exhibit-pages ul li > ul li:before {
+    content: "\2014";
+}
+
+.flow-exhibit-pages li {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.flow-exhibit-pages current {
+    font-weight: bold;
+}
+
+.flow-exhibit-pages current > *:not(a) {
+    font-weight: normal;
+}
+
+.flow-exhibit-pages > ul > li:not(.parent) ul {
+    display: none;
+}
+
+.flow-exhibit-pages > ul > li.current ul {
+    display: block;
+    margin-left: 20px;
+}
+
+.flow-exhibit-pages a {
+    margin-left: 10px;
+    text-decoration: none;
 }
