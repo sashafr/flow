@@ -34,7 +34,7 @@ echo head($head); ?>
 
 
     <div class="row row-flow">
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div id="primary">
                 <?php echo flash(); ?>
 
@@ -89,27 +89,6 @@ echo head($head); ?>
                 </form>
             <?php endif; ?>
         </div>
-    </div>
-
-    <!-- Sidebar Widgets Column -->
-    <div class="col-lg-4">
-
-        <!-- Search Widget -->
-        <div class="card my-4">
-            <h5 class="card-header">Search</h5>
-            <div class="card-body">
-                <?php echo search_form(); ?>
-            </div>
-        </div>
-
-        <!-- Side Widget -->
-        <div class="card my-4">
-            <h5 class="card-header">Featured Item</h5>
-            <div class="card-body flow-sidebar">
-                <?php echo random_featured_items(1); ?>
-            </div>
-        </div>
-
     </div>
 </div>
 </div>

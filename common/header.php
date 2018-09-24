@@ -76,6 +76,9 @@
     echo head_css();
     ?>
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1:400,900" rel="stylesheet">
+
     <!-- JavaScripts -->
     <?php
     queue_js_url('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js');

@@ -6,7 +6,7 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
 <!-- Page Content -->
 <div class="container">
     <div class="row row-flow">
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <h1 class="my-4"><?php echo $title; ?> <?php echo __('(%s total)', $total_results); ?></h1>
 
             <!-- Exhibits -->
@@ -34,27 +34,6 @@ echo head(array('title' => $title, 'bodyclass' => 'exhibits browse'));
             <?php else: ?>
                 <p><?php echo __('There are no exhibits available yet.'); ?></p>
             <?php endif; ?>
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-lg-4">
-
-            <!-- Search Widget -->
-            <div class="card my-4">
-                <h5 class="card-header">Search</h5>
-                <div class="card-body">
-                    <?php echo search_form(); ?>
-                </div>
-            </div>
-
-            <!-- Side Widget -->
-            <div class="card my-4">
-                <h5 class="card-header">Featured Item</h5>
-                <div class="card-body flow-sidebar">
-                    <?php echo random_featured_items(1); ?>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>

@@ -8,7 +8,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
     <div class="row row-flow">
 
-        <div class="col-lg-8">
+        <div class="col-lg-12">
 
             <h1 class="my-4"><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 
@@ -32,27 +32,6 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
             <?php endforeach ?>
 
             <?php echo pagination_links(); ?>
-
-        </div>
-
-        <!-- Sidebar Widgets Column -->
-        <div class="col-lg-4">
-
-            <!-- Search Widget -->
-            <div class="card my-4">
-                <h5 class="card-header">Search</h5>
-                <div class="card-body">
-                    <?php echo search_form(); ?>
-                </div>
-            </div>
-
-            <!-- Side Widget -->
-            <div class="card my-4">
-                <h5 class="card-header">Side Widget</h5>
-                <div class="card-body">
-                    You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-                </div>
-            </div>
 
         </div>
 
