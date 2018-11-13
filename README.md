@@ -1,5 +1,5 @@
 # Flow
-Flow is a colorful theme that adds a variety of unique display elements designed for oral histories and tours:
+Flow is a colorful Omeka theme that adds a variety of unique display elements designed for oral histories and tours:
 * Items with the Oral History Item Type and text in the Transcript field will display a word cloud of the transcript.
 * Alternative, minmial theme layout for the Curatescape plugin tours
 * Configurable home page blocks
