@@ -26,11 +26,25 @@ body > .container {
 .navbar-nav li>a {
     display: block;
     padding: 0.5rem 1rem;
-    color: rgba(255,255,255,.5);
+    color: #8080b3;
 }
 
 .navbar-nav .active>a {
     color: #fff;
+}
+
+.navbar-nav ul {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.navbar-nav li:hover ul {
+    display: block;
 }
 
 #curatescape-map-canvas {

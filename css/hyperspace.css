@@ -114,7 +114,7 @@ section, summary, time, mark, audio, video {
         }
 
         body {
-            background: #312450;
+            background: #030F62;
         }
 
         body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3509,7 +3509,8 @@ section, summary, time, mark, audio, video {
         @media screen and (max-width: 736px) {
 
             #sidebar + #wrapper {
-                padding-top: 0;
+                padding-top: 3.5em;
+                /* added padding from 0 to 3.5 */
             }
 
         }
@@ -3530,6 +3531,14 @@ section, summary, time, mark, audio, video {
                 margin-left: 10em;
             }
 
+        }
+
+        /* for iPhones, remove navbar */
+        @media screen and (max-width: 414px) {
+
+            #sidebar {
+                display: none;
+            }
         }
 
         #footer > .inner a {
@@ -3839,7 +3848,7 @@ section, summary, time, mark, audio, video {
         @media screen and (max-width: 1280px) {
 
             #sidebar {
-                height: 3.5em;
+                height: 3em;
                 left: 0;
                 line-height: 3.5em;
                 overflow: hidden;
@@ -3848,6 +3857,11 @@ section, summary, time, mark, audio, video {
                 top: 0;
                 width: 100%;
             }
+
+            .flow-sidebar-logo {
+              display: none;
+            }
+
 
             #sidebar > .inner {
                 -moz-flex-direction: row;
@@ -3898,13 +3912,26 @@ section, summary, time, mark, audio, video {
 
         }
 
-        @media screen and (max-width: 736px) {
-
+        @media screen and (max-width: 768px) {
+          #sidebar {
+              height: 3em;
+              left: 0;
+              line-height: 3.5em;
+              overflow: hidden;
+              padding: 0;
+              text-align: center;
+              top: 0;
+              width: 100%;
+          }
+          .flow-sidebar-logo {
+            display: none;
+          }
+      }
+/* Added above, because the sidebar should be viewed at this width
             #sidebar {
                 display: none;
             }
-
-        }
+*/
 
         /* Intro */
 

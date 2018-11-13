@@ -4,7 +4,7 @@
 <section id="sidebar">
     <div class="inner">
         <?php if(get_theme_option('lg_logo')): ?>
-            <div>
+            <div class="flow-sidebar-logo">
                 <a href='#'class='image'><img src="<?php echo WEB_ROOT.'/files/theme_uploads/'.get_theme_option('lg_logo'); ?>" style="width:100%;height:100%;" align="center"></a>
             </div>
         <?php endif; ?>
@@ -25,6 +25,9 @@
                 <?php endif; ?>
                 <?php if(get_theme_option('home_block_5_title')): ?>
                     <li><a href="#five"><?php echo get_theme_option('home_block_5_title') ?></a></li>
+                <?php endif; ?>
+                <?php if(get_theme_option('home_block_6_title')): ?>
+                    <li><a href="#six"><?php echo get_theme_option('home_block_6_title') ?></a></li>
                 <?php endif; ?>
             </ul>
         </nav>
@@ -133,7 +136,7 @@
         <?php endif; ?>
 
         <?php if(get_theme_option('home_block_5_title')): ?>
-            <!-- Four -->
+            <!-- Five -->
             <section id="five" class="wrapper style2 spotlights">
                 <?php if(get_theme_option('home_block_5_image')): ?>
                     <a class="image"><img src="<?php echo WEB_ROOT.'/files/theme_uploads/'.get_theme_option('home_block_5_image'); ?>" alt="" data-position="top center" /></a>
@@ -145,6 +148,26 @@
                         <?php if(get_theme_option('home_block_5_link')): ?>
                             <ul class="actions">
                                 <li><a href="<?php echo get_theme_option('home_block_5_link') ?>" class="button">Learn more</a></li>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
+        <?php if(get_theme_option('home_block_6_title')): ?>
+            <!-- Six -->
+            <section id="six" class="wrapper style2 spotlights">
+                <?php if(get_theme_option('home_block_6_image')): ?>
+                    <a class="image"><img src="<?php echo WEB_ROOT.'/files/theme_uploads/'.get_theme_option('home_block_6_image'); ?>" alt="" data-position="top center" /></a>
+                <?php endif; ?>
+                <div class="content">
+                    <div class="inner">
+                        <h2><?php echo get_theme_option('home_block_6_title') ?></h2>
+                        <p><?php echo get_theme_option('home_block_6_text') ?></p>
+                        <?php if(get_theme_option('home_block_6_link')): ?>
+                            <ul class="actions">
+                                <li><a href="<?php echo get_theme_option('home_block_6_link') ?>" class="button">Learn more</a></li>
                             </ul>
                         <?php endif; ?>
                     </div>

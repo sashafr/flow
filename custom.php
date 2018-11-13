@@ -1228,7 +1228,7 @@ function mh_item_images($item,$index=0){
 			$caption=$title_formatted.($desc ? ': ' : ' ~ ').mh_file_caption($file,false);
 			$src=WEB_ROOT.'/files/fullsize/'.str_replace( array('.JPG','.jpeg','.JPEG','.png','.PNG','.gif','.GIF'), '.jpg', $file->filename );
 			$html.= '<figure class="flex-image" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
-				$html.= '<a title="'.$title.'" class="file flex" href="'.$src.'" data-size="" style="background-image: url(\''.$src.'\');"></a>';
+				$html.= '<a title="'.strip_formatting($title).'" class="file flex" href="'.$src.'" data-size="" style="background-image: url(\''.$src.'\');"></a>';
 				$html.= '<figcaption hidden class="hidden;">'.strip_tags($caption,'<a><u><strong><em><i>').'</figcaption>';
 			$html.= '</figure>';
 		}
@@ -1357,7 +1357,18 @@ function mh_audio_files($item,$index=0){
 	<?php endif;
 }
 
-
+/*
+** Loop through and display private files
+*/
+function mh_private_files($item,$index=0){
+    if (element_exists("Item Type Metadata", "Private File")) {
+        $private_files = metadata($item, array('Item Type Metadata', 'Private File'));
+        if ($private_files): ?>
+            <h3><?php echo __('Private Files');?></h3>
+            <?php echo $private_files; ?>
+        <?php endif;
+    }
+}
 
 /*
 ** Loop through and display video files

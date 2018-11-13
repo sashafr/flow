@@ -66,6 +66,7 @@ if ($location) {
                 <?php mh_item_images($item);?>
                 <?php mh_audio_files($item);?>
                 <?php mh_document_files($item);?>
+                <?php mh_private_files($item);?>
             </section>
 
         </div>
@@ -139,7 +140,7 @@ if ($location) {
                     <table>
                         <?php foreach (all_element_texts($item, array('return_type' => 'array')) as $elementset => $elements): ?>
                             <?php foreach ($elements as $element => $elementtext): ?>
-                                <?php if ($elementtext != "" && $element != "Title" && $element != "Transcription" && $element != "Story"): ?>
+                                <?php if ($elementtext != "" && $element != "Title" && $element != "Transcription" && $element != "Story" && $element != "Private File"): ?>
                                     <div class="row" >
                                         <div class="col-sm-12">
                                             <div class="row element-title"><h5><?php echo $element ?></h5></div>
