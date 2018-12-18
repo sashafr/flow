@@ -10,7 +10,7 @@ Flow is a colorful Omeka theme that adds a variety of unique display elements de
 3. Curatescape Plugin [https://github.com/CPHDH/Curatescape] - Optimized to produce more lightweight tours.
 
 ### Installing
-Follow Omega Classic’s tutorial of installing a theme. [https://omeka.org/classic/docs/Admin/Appearance/Themes/]
+Follow Omeka Classic’s tutorial of installing a theme. [https://omeka.org/classic/docs/Admin/Appearance/Themes/]
 
 ## Built With
 * The Omeka Classic Interface. [https://omeka.org/classic/]

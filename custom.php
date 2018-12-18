@@ -1228,7 +1228,7 @@ function mh_item_images($item,$index=0){
 			$caption=$title_formatted.($desc ? ': ' : ' ~ ').mh_file_caption($file,false);
 			$src=WEB_ROOT.'/files/fullsize/'.str_replace( array('.JPG','.jpeg','.JPEG','.png','.PNG','.gif','.GIF'), '.jpg', $file->filename );
 			$html.= '<figure class="flex-image" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">';
-				$html.= '<a title="'.strip_formatting($title).'" class="file flex" href="'.$src.'" data-size="" style="background-image: url(\''.$src.'\');"></a>';
+				$html.= '<a data-lightbox="item-'.$item->id.'" data-title="'.$title.'" title="'.strip_formatting($title).'" class="file flex" href="'.$src.'" data-size="" style="background-image: url(\''.$src.'\');"></a>';
 				$html.= '<figcaption hidden class="hidden;">'.strip_tags($caption,'<a><u><strong><em><i>').'</figcaption>';
 			$html.= '</figure>';
 		}

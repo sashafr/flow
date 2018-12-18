@@ -18,7 +18,7 @@ $totalItems = metadata('collection', 'total_items');
 
             <?php foreach (loop('items') as $item): ?>
                 <div class="card mb-4">
-                    <?php if ($itemImage = record_image($item, 'original', array('class' => 'card-img-top'))): ?>
+                    <?php if ($itemImage = record_image($item, 'fullsize', array('class' => 'card-img-top'))): ?>
                         <div class="image-container-flow">
                             <?php echo $itemImage; ?>
                         </div>

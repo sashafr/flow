@@ -72,7 +72,7 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file(array('jqcloud', 'geolocation-items-map'));
+    queue_css_file(array('jqcloud', 'geolocation-items-map', 'lightbox'));
     echo head_css();
     ?>
 
@@ -83,7 +83,7 @@
     <?php
     queue_js_url('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js');
     queue_js_url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js');
-    queue_js_file(array('wordFreq', 'jqcloud'));
+    queue_js_file(array('wordFreq', 'jqcloud', 'lightbox'));
     echo head_js();
     ?>
 </head>
