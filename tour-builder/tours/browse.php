@@ -9,12 +9,6 @@ echo head( array(
     );
 ?>
 
-<!-- Page Content -->
-<div class="container">
-    <div class="row row-flow">
-
-        <!-- Blog Entries Column -->
-        <div class="col-lg-12">
 
             <h1 class="my-4"><?php echo __('All %1$s: %2$s', $label, total_tours());?></h1>
 
@@ -55,13 +49,5 @@ echo head( array(
                 </div>
 
             <?php endforeach ?>
-
-        </div>
-
-    </div>
-    <!-- /.row -->
-
-</div>
-<!-- /.container -->
 
 <?php echo foot(); ?>

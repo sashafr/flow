@@ -11,7 +11,6 @@ echo head( array( 'maptype'=>$maptype,'title' => ''.$label.' | '.$tourTitle, 'co
 ?>
 
 <!-- Page Content -->
-<div class="container">
 
     <div class="row row-flow">
 
@@ -131,7 +130,5 @@ echo head( array( 'maptype'=>$maptype,'title' => ''.$label.' | '.$tourTitle, 'co
     </div>
     <!-- /.row -->
 
-</div>
-<!-- /.container -->
 
 <?php echo foot(); ?>

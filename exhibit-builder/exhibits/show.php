@@ -5,7 +5,6 @@ echo head(array(
 ?>
 
 <!-- Page Content -->
-<div class="container">
 
    <div class="row row-flow-double">
 
@@ -47,7 +46,5 @@ echo head(array(
         </div>
 
     </div>
-
-</div>
 
 <?php echo foot(); ?>

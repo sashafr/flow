@@ -15,7 +15,6 @@ if ($location) {
 ?>
 
 <!-- Page Content -->
-<div class="container">
 
     <div class="row row-flow-double">
 
@@ -161,8 +160,5 @@ if ($location) {
 
     </div>
     <!-- /.row -->
-
-</div>
-<!-- /.container -->
 
 <?php echo foot(); ?>

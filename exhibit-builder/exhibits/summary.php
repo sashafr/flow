@@ -1,7 +1,6 @@
 <?php echo head(array('title' => metadata('exhibit', 'title'), 'bodyclass'=>'exhibits summary')); ?>
 
 <!-- Page Content -->
-<div class="container">
 
     <div class="row row-flow-double">
 
@@ -40,6 +39,5 @@
         </div>
 
     </div>
-</div>
 
 <?php echo foot(); ?>

@@ -5,7 +5,6 @@ $searchRecordTypes = get_search_record_types();
 ?>
 
 <!-- Page Content -->
-<div class="container">
 
     <div class="row row-flow">
 
@@ -55,7 +54,6 @@ $searchRecordTypes = get_search_record_types();
     </div>
     <!-- /.row -->
 
-</div>
-<!-- /.container -->
+
 
 <?php echo foot(); ?>

@@ -4,11 +4,6 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
 
 <!-- Page Content -->
-<div class="container">
-
-    <div class="row row-flow">
-
-        <div class="col-lg-12">
 
             <h1 class="my-4"><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 
@@ -33,12 +28,5 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 
             <?php echo pagination_links(); ?>
 
-        </div>
-
-    </div>
-    <!-- /.row -->
-
-</div>
-<!-- /.container -->
 
 <?php echo foot(); ?>

@@ -72,7 +72,7 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file(array('jqcloud', 'geolocation-items-map', 'lightbox'));
+    queue_css_file(array('jqcloud', 'lightbox'));
     echo head_css();
     ?>
 
@@ -104,5 +104,9 @@
             </div>
         </div>
     </nav>
+    <div class="container" id="content" role="main">    
+        <div class="row row-flow">
+            <div class="col-lg-12">  
+    
 <?php else: ?>
 <?php endif ?>
