@@ -43,6 +43,12 @@ body > .container {
     z-index: 1;
 }
 
+.navbar-nav li {
+    display: inline-block;
+    width: auto;
+    list-style: outside none none;
+}
+
 .navbar-nav li:hover ul {
     display: block;
 }
@@ -621,4 +627,17 @@ section.media {
 .flow-exhibit-pages a {
     margin-left: 10px;
     text-decoration: none;
+}
+
+.items-nav .navbar-nav {
+    flex-direction: row;
+    -ms-flex-direction: row;
+}
+
+.items-nav {
+    float: left;
+}
+
+.pagination-nav {
+    float: right;
 }
