@@ -51,12 +51,12 @@
     <!-- Using different stylesheets for home page v. all other pages -->
     <?php if (is_current_url(url('/'))): ?>
         <?php queue_css_file(array('hyperspace')); ?>
-        <?php queue_js_url('themes/flow/javascripts/hyperspace/breakpoints.min.js'); ?>
-        <?php queue_js_url('themes/flow/javascripts/hyperspace/browser.min.js'); ?>
-        <?php queue_js_url('themes/flow/javascripts/hyperspace/jquery.scrollex.min.js'); ?>
-        <?php queue_js_url('themes/flow/javascripts/hyperspace/jquery.scrolly.min.js'); ?>
-        <?php queue_js_url('themes/flow/javascripts/hyperspace/main.js'); ?>
-        <?php queue_js_url('themes/flow/javascripts/hyperspace/util.js'); ?>
+        <?php queue_js_url(src('breakpoints.min', 'javascripts/hyperspace', 'js')); ?>
+        <?php queue_js_url(src('browser.min', 'javascripts/hyperspace', 'js')); ?>
+        <?php queue_js_url(src('jquery.scrollex.min', 'javascripts/hyperspace', 'js')); ?>
+        <?php queue_js_url(src('jquery.scrolly.min', 'javascripts/hyperspace', 'js')); ?>
+        <?php queue_js_url(src('main', 'javascripts/hyperspace', 'js')); ?>
+        <?php queue_js_url(src('util', 'javascripts/hyperspace', 'js')); ?>
     <?php else: ?>
         <?php queue_css_file(array('flow')); ?>
         <?php queue_css_url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'); ?>
@@ -104,9 +104,9 @@
             </div>
         </div>
     </nav>
-    <div class="container" id="content" role="main">    
+    <div class="container" id="content" role="main">
         <div class="row row-flow">
-            <div class="col-lg-12">  
-    
+            <div class="col-lg-12">
+
 <?php else: ?>
 <?php endif ?>
