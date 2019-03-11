@@ -186,8 +186,12 @@
 <!-- Footer -->
 <footer id="footer" class="wrapper style1-alt">
     <div class="inner">
+        <?php if(get_theme_option('home_menu')): ?>
+            <?php echo public_nav_main()->setUlClass("menu"); ?>
+        <?php endif ?>
         <ul class="menu">
             <li><?php echo get_theme_option('custom_footer_html');?></li>
+            <p>Theme developed by the <a href="https://github.com/upenndigitalscholarship">Penn Libraries</a> |  <a href="https://github.com/upenndigitalscholarship/flow">Get the Code</a></p>
         </ul>
     </div>
 </footer>
