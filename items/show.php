@@ -6,11 +6,13 @@ if ($hasimg=metadata($item, 'has thumbnail') ) {
 }
 $maptype='story';
 
-$location = get_db()->getTable('Location')->findLocationByItem($item, true);
-if ($location) {
-    $usemap = true;
-} else {
-    $usemap = false;
+$usemap = false;
+
+if (plugin_is_active('Geolocation')) {
+    $location = get_db()->getTable('Location')->findLocationByItem($item, true);
+    if ($location) {
+        $usemap = true;
+    }
 }
 ?>
 

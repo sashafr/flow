@@ -250,7 +250,11 @@ function mh_get_tour_json($tour=null){
 	if($tour){
 		$tourItems=array();
 		foreach($tour->Items as $item){
-			$location = get_db()->getTable( 'Location' )->findLocationByItem( $item, true );
+            if (plugin_is_active('Geolocation')) {
+			    $location = get_db()->getTable( 'Location' )->findLocationByItem( $item, true );
+            } else {
+                $location = false;
+            }
 			$address = ( element_exists('Item Type Metadata','Street Address') )
 				? preg_replace( "/\r|\n/", " ",strip_tags(metadata( $item, array( 'Item Type Metadata','Street Address' )) ))
 				: null;
@@ -280,7 +284,11 @@ function mh_get_tour_json($tour=null){
 function mh_get_item_json($item=null){
 
 	if($item){
-		$location = get_db()->getTable( 'Location' )->findLocationByItem( $item, true );
+        if (plugin_is_active('Geolocation')) {
+		    $location = get_db()->getTable( 'Location' )->findLocationByItem( $item, true );
+        } else {
+            $location = false;
+        }
 		$address= ( element_exists('Item Type Metadata','Street Address') )
 			? preg_replace( "/\r|\n/", " ", strip_tags(metadata( 'item', array( 'Item Type Metadata','Street Address' )) ))
 			: null;
@@ -730,7 +738,7 @@ function mh_map_actions($item=null,$tour=null,$collection=null,$saddr='current',
 		$street_address=null;
 
 
-		if($item!==null){
+		if($item!==null && plugin_is_active('Geolocation')){
 
 			// get the destination coordinates for the item
 			$location = get_db()->getTable('Location')->findLocationByItem($item, true);
@@ -739,7 +747,7 @@ function mh_map_actions($item=null,$tour=null,$collection=null,$saddr='current',
 
 			$showlink=true;
 
-		}elseif($tour!==null){
+		}elseif($tour!==null && plugin_is_active('Geolocation')) {
 
 			// get the waypoint coordinates for the tour
 			$coords = array();
