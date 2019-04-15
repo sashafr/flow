@@ -34,7 +34,7 @@ if (plugin_is_active('Geolocation')) {
             </header>
 
             <!-- Tour Stops -->
-            <?php if (metadata('item', array('Item Type Metadata', 'Story')) != ""): ?>
+            <?php if (element_exists('Item Type Metadata', 'Story') && metadata('item', array('Item Type Metadata', 'Story')) != ""): ?>
                 <div class="lead">
                     <?php echo mh_the_text(); ?>
                 </div>
