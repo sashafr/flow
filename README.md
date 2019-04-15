@@ -1,4 +1,7 @@
 # Flow
+
+*[A Penn Libraries Digital Scholarship Project](https://guides.library.upenn.edu/digital-scholarship)*
+
 Flow is a colorful Omeka theme that adds a variety of unique display elements designed for oral histories and tours:
 * Items with the Oral History Item Type and text in the Transcript field will display a word cloud of the transcript.
 * Alternative, minmial theme layout for the Curatescape plugin tours
@@ -6,14 +9,16 @@ Flow is a colorful Omeka theme that adds a variety of unique display elements de
 
 ### Prerequisites
 1. Contribution Plugin [https://github.com/omeka/plugin-Contribution]
-2. Tour-Builder Plugin
-3. Curatescape Plugin [https://github.com/CPHDH/Curatescape] - Optimized to produce more lightweight tours.
+2. Tour-Builder Plugin [https://github.com/CPHDH/TourBuilder]
+3. Geolocation Plugin [https://github.com/omeka/plugin-Geolocation]
+4. Curatescape Plugin [https://github.com/CPHDH/Curatescape] - Optimized to produce more lightweight tours.
 
 ### Installing
 Follow Omeka Classic’s tutorial of installing a theme. [https://omeka.org/classic/docs/Admin/Appearance/Themes/]
 
 ## Built With
-* The Omeka Classic Interface. [https://omeka.org/classic/]
+* The Omeka Classic Interface [https://omeka.org/classic/]
+* Curatescape Theme [https://github.com/CPHDH/theme-curatescape]
 
 
 ## Authors
